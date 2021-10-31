@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="ABB-EK-ouE" id="Skl-bW-DdG"/>
                         <outlet property="headingLabel" destination="Taa-69-NCX" id="D75-M1-M9Y"/>
+                        <outlet property="openTableButton" destination="LfL-Y0-z7T" id="Fig-IO-11H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

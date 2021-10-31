@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController" customModule="HW12_NavigationListPupils" customModuleProvider="target">
             <connections>
+                <outlet property="completellyRandomButton" destination="r4M-AQ-4cZ" id="aZ3-VI-JQm"/>
+                <outlet property="randomlyFromAnArrayButton" destination="z3k-LT-cfr" id="LPP-Ev-i6Y"/>
                 <outlet property="tableView" destination="CXS-ga-CTV" id="7rY-k3-Idw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -49,7 +51,6 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="newPupilPressed:" destination="-1" eventType="touchUpInside" id="LSj-Jf-9M6"/>
                         <action selector="newPupilfromArrayPressed:" destination="-1" eventType="touchUpInside" id="80b-KQ-699"/>
                     </connections>
                 </button>

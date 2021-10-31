@@ -10,7 +10,8 @@ import UIKit
 class TableViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
-    
+    @IBOutlet weak var completellyRandomButton: UIButton!
+    @IBOutlet weak var randomlyFromAnArrayButton: UIButton!
     
     private var dataSourcePupils: [ModelPupilsData] = [
         ModelPupilsData(pupilNameString: "Rob", pupilClassString: "A"),
@@ -75,6 +76,9 @@ class TableViewController: UIViewController {
         tableView.dataSource = self
         tableView.backgroundColor = .black
         view.backgroundColor = .black
+        completellyRandomButton.layer.cornerRadius = 10
+        randomlyFromAnArrayButton.layer.cornerRadius = 10
+        
         
         tableView.register(UINib(nibName: "ProfilePupilsCells", bundle: nil), forCellReuseIdentifier: ProfilePupilsCells.identifier)
     }
