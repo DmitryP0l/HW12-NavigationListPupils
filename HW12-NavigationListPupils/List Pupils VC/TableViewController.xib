@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController" customModule="HW12_NavigationListPupils" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="CXS-ga-CTV" id="7rY-k3-Idw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CXS-ga-CTV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="708"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4M-AQ-4cZ">
+                    <rect key="frame" x="117" y="767" width="180" height="30"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="Ep7-rG-vT4"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Сompletely random">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="newPupilPressed:" destination="-1" eventType="touchUpInside" id="VvP-yu-5t9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3k-LT-cfr">
+                    <rect key="frame" x="117" y="815" width="180" height="30"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="IDo-TO-vzM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Randomly from an array">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="newPupilPressed:" destination="-1" eventType="touchUpInside" id="LSj-Jf-9M6"/>
+                        <action selector="newPupilfromArrayPressed:" destination="-1" eventType="touchUpInside" id="80b-KQ-699"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CXS-ga-CTV" secondAttribute="trailing" id="3xW-as-Mbu"/>
+                <constraint firstItem="CXS-ga-CTV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Crg-s5-L0A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CXS-ga-CTV" secondAttribute="bottom" constant="110" id="H5h-cH-yIh"/>
+                <constraint firstItem="z3k-LT-cfr" firstAttribute="top" secondItem="r4M-AQ-4cZ" secondAttribute="bottom" constant="18" id="J7L-6G-ccs"/>
+                <constraint firstItem="z3k-LT-cfr" firstAttribute="centerX" secondItem="r4M-AQ-4cZ" secondAttribute="centerX" id="TMo-LR-SOC"/>
+                <constraint firstItem="CXS-ga-CTV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Z59-bA-aFa"/>
+                <constraint firstItem="r4M-AQ-4cZ" firstAttribute="centerX" secondItem="CXS-ga-CTV" secondAttribute="centerX" id="hB5-J4-uVC"/>
+                <constraint firstItem="r4M-AQ-4cZ" firstAttribute="top" secondItem="CXS-ga-CTV" secondAttribute="bottom" constant="15" id="wcW-3R-0Cb"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

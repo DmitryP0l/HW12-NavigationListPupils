@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW12_NavigationListPupils" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-Y0-z7T">
+                                <rect key="frame" x="127" y="428" width="160" height="40"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Gs-qj-bh9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="PnA-7R-hbF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Table Pupils">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openTablePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CoI-UQ-MEL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="заголовок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Taa-69-NCX">
+                                <rect key="frame" x="144" y="150" width="126.5" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="описание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABB-EK-ouE">
+                                <rect key="frame" x="161" y="244" width="92" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ABB-EK-ouE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="75W-Ri-sTS"/>
+                            <constraint firstItem="ABB-EK-ouE" firstAttribute="top" secondItem="Taa-69-NCX" secondAttribute="bottom" constant="59" id="CG2-XP-Rr7"/>
+                            <constraint firstItem="Taa-69-NCX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="Exx-qu-M7L"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ABB-EK-ouE" secondAttribute="trailing" id="Mx7-DG-y6U"/>
+                            <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WQ1-4e-yyu"/>
+                            <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YGu-mq-SiJ"/>
+                            <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zwx-bv-ppd"/>
+                            <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lgd-zD-asv"/>
+                            <constraint firstItem="Taa-69-NCX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vvS-tM-EDP"/>
+                            <constraint firstItem="ABB-EK-ouE" firstAttribute="centerX" secondItem="Taa-69-NCX" secondAttribute="centerX" id="vw5-Bc-era"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="ABB-EK-ouE" id="Skl-bW-DdG"/>
+                        <outlet property="headingLabel" destination="Taa-69-NCX" id="D75-M1-M9Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
