@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.text.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-IP-zrm">
+                                <rect key="frame" x="0.0" y="45" width="414" height="815.5"/>
+                                <color key="tintColor" red="0.46696432560000001" green="0.51277581309999998" blue="0.48525841250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-Y0-z7T">
                                 <rect key="frame" x="127" y="428" width="160" height="40"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,10 +52,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ABB-EK-ouE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="75W-Ri-sTS"/>
+                            <constraint firstItem="ABB-EK-ouE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="75W-Ri-sTS"/>
+                            <constraint firstItem="SeR-IP-zrm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7A6-dV-PGR"/>
+                            <constraint firstItem="SeR-IP-zrm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AfD-ge-0Oz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SeR-IP-zrm" secondAttribute="bottom" id="BsY-LG-9ue"/>
                             <constraint firstItem="ABB-EK-ouE" firstAttribute="top" secondItem="Taa-69-NCX" secondAttribute="bottom" constant="59" id="CG2-XP-Rr7"/>
                             <constraint firstItem="Taa-69-NCX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="Exx-qu-M7L"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ABB-EK-ouE" secondAttribute="trailing" id="Mx7-DG-y6U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SeR-IP-zrm" secondAttribute="trailing" id="JJu-bl-TFf"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ABB-EK-ouE" secondAttribute="trailing" constant="20" id="Mx7-DG-y6U"/>
                             <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WQ1-4e-yyu"/>
                             <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YGu-mq-SiJ"/>
                             <constraint firstItem="LfL-Y0-z7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zwx-bv-ppd"/>
@@ -72,6 +80,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.text.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
