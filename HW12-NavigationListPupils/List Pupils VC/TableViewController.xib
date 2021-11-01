@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="completellyRandomButton" destination="r4M-AQ-4cZ" id="aZ3-VI-JQm"/>
                 <outlet property="randomlyFromAnArrayButton" destination="z3k-LT-cfr" id="LPP-Ev-i6Y"/>
+                <outlet property="searchBar" destination="XsV-dF-YQT" id="Fgr-PL-4uv"/>
                 <outlet property="tableView" destination="CXS-ga-CTV" id="7rY-k3-Idw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CXS-ga-CTV">
-                    <rect key="frame" x="0.0" y="44" width="414" height="708"/>
+                    <rect key="frame" x="0.0" y="94" width="414" height="658"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4M-AQ-4cZ">
@@ -54,16 +55,25 @@
                         <action selector="newPupilfromArrayPressed:" destination="-1" eventType="touchUpInside" id="80b-KQ-699"/>
                     </connections>
                 </button>
+                <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-dF-YQT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CXS-ga-CTV" secondAttribute="trailing" id="3xW-as-Mbu"/>
-                <constraint firstItem="CXS-ga-CTV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Crg-s5-L0A"/>
+                <constraint firstItem="CXS-ga-CTV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Crg-s5-L0A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CXS-ga-CTV" secondAttribute="bottom" constant="110" id="H5h-cH-yIh"/>
                 <constraint firstItem="z3k-LT-cfr" firstAttribute="top" secondItem="r4M-AQ-4cZ" secondAttribute="bottom" constant="18" id="J7L-6G-ccs"/>
+                <constraint firstItem="XsV-dF-YQT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Rue-za-iL1"/>
                 <constraint firstItem="z3k-LT-cfr" firstAttribute="centerX" secondItem="r4M-AQ-4cZ" secondAttribute="centerX" id="TMo-LR-SOC"/>
+                <constraint firstItem="XsV-dF-YQT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YMj-Qp-C4J"/>
                 <constraint firstItem="CXS-ga-CTV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Z59-bA-aFa"/>
+                <constraint firstItem="XsV-dF-YQT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eXg-tv-0jE"/>
                 <constraint firstItem="r4M-AQ-4cZ" firstAttribute="centerX" secondItem="CXS-ga-CTV" secondAttribute="centerX" id="hB5-J4-uVC"/>
                 <constraint firstItem="r4M-AQ-4cZ" firstAttribute="top" secondItem="CXS-ga-CTV" secondAttribute="bottom" constant="15" id="wcW-3R-0Cb"/>
             </constraints>

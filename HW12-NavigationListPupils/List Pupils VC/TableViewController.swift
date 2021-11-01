@@ -7,11 +7,13 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class TableViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet weak var completellyRandomButton: UIButton!
     @IBOutlet weak var randomlyFromAnArrayButton: UIButton!
+    // добавляем серчБар
+    @IBOutlet weak var searchBar: UISearchBar!
     
     private var dataSourcePupils: [ModelPupilsData] = [
         ModelPupilsData(pupilNameString: "Rob", pupilClassString: "A"),
@@ -31,17 +33,53 @@ class TableViewController: UIViewController {
         ModelPupilsData(pupilNameString: "Ostin", pupilClassString: "A")
     ]
     private let namePupilsArray: [String] = [
-        "James", "Mary", "John", "Patricia", "Robert", "Linda", "Michael", "Barbara","William",
-        "Elizabeth", "David", "Jennifer", "Richard", "Maria", "Charles","Susan", "Joseph",
-        "Margaret", "Thomas", "Dorothy", "Christopher", "Lisa","Daniel", "Nancy" ,"Paul", "Karen",
-        "Mark", "Betty", "Donald", "Helen","George", "Sandra", "Kenneth", "Donna", "Steven", "Carol",
-        "Edward", "Ruth", "Brian", "Sharon", "Jacob", "Emma", "Michael", "Isabella", "Ethan", "Emily"
+        "James", "Mary", "John", "Patricia", "Robert", "Linda", "Michael",
+        "Barbara","William","Elizabeth", "David", "Jennifer", "Richard",
+        "Maria", "Charles","Susan", "Joseph","Margaret", "Thomas", "Dorothy",
+        "Christopher", "Lisa","Daniel", "Nancy" ,"Paul", "Karen","Mark",
+        "Donald", "Helen","George", "Sandra", "Kenneth", "Donna", "Steven",
+        "Carol","Edward", "Ruth", "Brian", "Sharon", "Jacob", "Emma",
+        "Michael", "Isabella", "Ethan", "Emily", "Betty"
     ]
+    // создаем массив имен из основного массива
+    private var namesData: [String] {
+        let pupilNamesArray = dataSourcePupils.compactMap({$0.pupilNameString})
+        return pupilNamesArray
+    }
+    
+    // массив длф наполнения при обновлении
+    private var filtredData: [String]!
+    
     private var classesArray: [String] {
         let pupilClassesArray = dataSourcePupils.compactMap({ $0.pupilClassString })
         let set = Set(pupilClassesArray)
         return set.sorted()
     }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filtredData = searchText.isEmpty ? namesData : namesData.filter({(dataString: String) -> Bool in
+            return dataString.range(of: searchText, options: .caseInsensitive) != nil
+        })
+
+        tableView.reloadData()
+    }
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     @IBAction func newPupilPressed(_ sender: UIButton) {
@@ -67,6 +105,10 @@ class TableViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        //передаем делегата текущему классу
+        searchBar.delegate = self
+        filtredData = namesData
+        
         tableView.backgroundColor = .black
         view.backgroundColor = .black
         completellyRandomButton.layer.cornerRadius = 10
@@ -120,9 +162,9 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let classString = classesArray[section]
-        let pupils = filterStudentsFor(classString: classString)
-        return pupils.count
+//        let classString = classesArray[section]
+//        let pupils = filterStudentsFor(classString: classString)
+        return filtredData.count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -190,7 +232,6 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
     
     
     
