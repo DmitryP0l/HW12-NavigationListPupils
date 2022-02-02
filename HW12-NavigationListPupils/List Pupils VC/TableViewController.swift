@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+final class TableViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet weak var completellyRandomButton: UIButton!
@@ -190,11 +190,6 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
-    
-    
-    
-    
-    
+
     
 }
